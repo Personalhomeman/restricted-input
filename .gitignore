@@ -1,7 +1,6 @@
 node_modules
 *.log
 
-dist/
 .env
 jsdoc/
 sauce_connect.ready
