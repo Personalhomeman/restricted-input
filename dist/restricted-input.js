@@ -14,10 +14,10 @@ module.exports = {
 
 var UA = global.navigator && global.navigator.userAgent;
 
-var isAndroid = require('@braintree/browser-detection/is-android');
-var isChrome = require('@braintree/browser-detection/is-chrome');
-var isIos = require('@braintree/browser-detection/is-ios');
-var isIE9 = require('@braintree/browser-detection/is-ie9');
+var isAndroid = require('browser-detection/is-android');
+var isChrome = require('browser-detection/is-chrome');
+var isIos = require('browser-detection/is-ios');
+var isIE9 = require('browser-detection/is-ie9');
 
 // Old Android Webviews used specific versions of Chrome with 0.0.0 as their version suffix
 // https://developer.chrome.com/multidevice/user-agent#webview_user_agent
@@ -53,7 +53,7 @@ module.exports = {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"@braintree/browser-detection/is-android":18,"@braintree/browser-detection/is-chrome":19,"@braintree/browser-detection/is-ie9":21,"@braintree/browser-detection/is-ios":22}],3:[function(require,module,exports){
+},{"browser-detection/is-android":18,"browser-detection/is-chrome":19,"browser-detection/is-ie9":21,"browser-detection/is-ios":22}],3:[function(require,module,exports){
 'use strict';
 
 var parsePattern = require('./parse-pattern');
