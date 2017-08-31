@@ -35,7 +35,7 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "browser-detection": "github:github/browser-detection"
+    "browser-detection": "github:github/browser-detection#c12b64a319d36dd6ac8f229a3347c8a8f9eda6a2"
   },
   "devDependencies": {
     "browserify": "13.0.1",
