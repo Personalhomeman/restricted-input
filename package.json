@@ -5,6 +5,7 @@
   "author": "Braintree <code@getbraintree.com> (https://www.braintreepayments.com/)",
   "license": "MIT",
   "main": "main.js",
+  "browser": "./dist/restricted-input.js",
   "homepage": "https://github.com/braintree/restricted-input",
   "repository": {
     "type": "git",
