@@ -352,6 +352,9 @@ module.exports = function (event) {
 };
 
 },{"./input-selection":5}],10:[function(require,module,exports){
+module.exports = require('./restricted-input');
+
+},{"./restricted-input":11}],11:[function(require,module,exports){
 'use strict';
 
 var device = require('./device');
@@ -421,7 +424,7 @@ RestrictedInput.supportsFormatting = function () {
 
 module.exports = RestrictedInput;
 
-},{"../supports-input-formatting":24,"./constants":1,"./device":2,"./is-valid-element":8,"./strategies/android-chrome":11,"./strategies/base":12,"./strategies/ie9":13,"./strategies/ios":14,"./strategies/kitkat-chromium-based-webview":15,"./strategies/noop":16}],11:[function(require,module,exports){
+},{"../supports-input-formatting":24,"./constants":1,"./device":2,"./is-valid-element":8,"./strategies/android-chrome":12,"./strategies/base":13,"./strategies/ie9":14,"./strategies/ios":15,"./strategies/kitkat-chromium-based-webview":16,"./strategies/noop":17}],12:[function(require,module,exports){
 'use strict';
 
 var keyCannotMutateValue = require('../key-cannot-mutate-value');
@@ -498,7 +501,7 @@ AndroidChromeStrategy.prototype._afterReformatInput = function (formattedState) 
 
 module.exports = AndroidChromeStrategy;
 
-},{"../input-selection":5,"../key-cannot-mutate-value":9,"./base":12}],12:[function(require,module,exports){
+},{"../input-selection":5,"../key-cannot-mutate-value":9,"./base":13}],13:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -693,7 +696,7 @@ BaseStrategy.prototype._getStateToFormat = function () {
 module.exports = BaseStrategy;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../formatter":3,"../input-selection":5,"../is-backspace":6,"../is-delete":7,"../key-cannot-mutate-value":9}],13:[function(require,module,exports){
+},{"../formatter":3,"../input-selection":5,"../is-backspace":6,"../is-delete":7,"../key-cannot-mutate-value":9}],14:[function(require,module,exports){
 'use strict';
 
 var BaseStrategy = require('./base');
@@ -789,7 +792,7 @@ function padSelection(selection, pad) {
 
 module.exports = IE9Strategy;
 
-},{"../input-selection":5,"../key-cannot-mutate-value":9,"./base":12}],14:[function(require,module,exports){
+},{"../input-selection":5,"../key-cannot-mutate-value":9,"./base":13}],15:[function(require,module,exports){
 'use strict';
 
 var BaseStrategy = require('./base');
@@ -866,7 +869,7 @@ IosStrategy.prototype._keydownListener = function (event) {
 
 module.exports = IosStrategy;
 
-},{"../input-selection":5,"../key-cannot-mutate-value":9,"./base":12}],15:[function(require,module,exports){
+},{"../input-selection":5,"../key-cannot-mutate-value":9,"./base":13}],16:[function(require,module,exports){
 'use strict';
 
 // Android Devices on KitKat use Chromium based webviews. For some reason,
@@ -899,7 +902,7 @@ KitKatChromiumBasedWebViewStrategy.prototype._unformatInput = function () {
 
 module.exports = KitKatChromiumBasedWebViewStrategy;
 
-},{"./android-chrome":11}],16:[function(require,module,exports){
+},{"./android-chrome":12}],17:[function(require,module,exports){
 'use strict';
 
 function NoopStrategy(options) {
@@ -914,10 +917,7 @@ NoopStrategy.prototype.setPattern = function () {};
 
 module.exports = NoopStrategy;
 
-},{}],17:[function(require,module,exports){
-module.exports = require('./lib/restricted-input');
-
-},{"./lib/restricted-input":10}],18:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -984,5 +984,5 @@ module.exports = function () {
   return !device.isSamsungBrowser();
 };
 
-},{"./lib/device":2}]},{},[17])(17)
+},{"./lib/device":2}]},{},[10])(10)
 });

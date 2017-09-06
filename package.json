@@ -21,7 +21,7 @@
     "restrict"
   ],
   "scripts": {
-    "build": "mkdir -p dist; browserify ./main.js -o dist/restricted-input.js -s RestrictedInput -v",
+    "build": "mkdir -p dist; browserify ./lib/main.js -o dist/restricted-input.js -s RestrictedInput -v",
     "doc": "jsdoc -r -R README.md -d jsdoc lib/",
     "doc:watch": "npm run doc && chokidar 'lib/**/*.js' -c 'npm run doc'",
     "start": "node ./test/support/server.js",
